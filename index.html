@@ -1,87 +1,184 @@
-<!DOCTYPE html>  
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4Y36RCZTE"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='WebデザイナーTakamasa Ashizawa ポートフォリオ'>
+  <!-- <meta property='og:url' content='URLが入る'> -->
+  <meta property='og:description' content='Takamasa Ashizawaのポートフォリオサイトです。'>
+  <!-- <meta property="og:image" content="img/ogp.png"> -->
+  <meta name="description" content="Takamasa Ashizawaのポートフォリオサイトです" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Takamasa Ashizawa</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <!-- <link rel="shortcut icon" href="img/favicon.ico" /> -->
+  <link rel=”canonical” href=”URLが入る” />
 
-        gtag('config', 'G-C4Y36RCZTE');
-        </script>
-        <title>HTML/CSSの学習</title>
-        <link rel="stylesheet" href="stylesheet.css">
-    </head>
-    <body>
-        <div id="header">
-            <h1><a href="index.html"><img id="corridor" src="images/corridor.jpg" alt="大学の廊下" /></a></h1>
-        </div>
-        <div id="wrapper">
-            <div id="nav">
-                <ul>
-                    <li><a href="index.html">ナビ1</a></li>
-                    <li><a href="#">ナビ2</a></li>
-                    <li><a href="#">ナビ3</a></li>
-                    <li><a href="#">ナビ4</a></li>
-                    <li><a href="#">ナビ5</a></li>
-                </ul>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      // #で始まるリンクをクリックしたら実行されます
+      $('a[href^="#"]').click(function() {
+        // スクロールの速度
+        let speed = 500; // ミリ秒で記述
+        let href= $(this).attr("href");
+        let target = $(href == "#" || href == "" ? 'html' : href);
+        let position = target.offset().top;
+        $('body,html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+      });
+    });
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TJ9LN0VFV0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TJ9LN0VFV0');
+</script>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- header -->
+    <header class="header">
+        <h1 id="index">
+          Takamasa Ashizawa
+        </h1>
+        
+    </header>
+    <!-- /header -->
+
+    <!-- main -->
+    <main>
+
+      <div class="main-title">
+        <h1>期待を超えるものを創る</h1>
+        <p>
+          お客様とのコミュニケーションを大切にして<br>
+          期待以上の作品を創ります
+        </p>
+
+        
+      </div>
+      
+      <div class="main-img">
+        <img src="img/cat.jpg" alt="自己紹介の写真">
+      </div>
+
+      
+    </main>
+    <!-- /main -->
+
+    
+    <!-- menu -->
+    <div class="container">
+      <ul class="menu-list">
+        <li><a href="" class="active" data-id="works">WORKS</a></li>
+        <li><a href="" data-id="about">ABOUT</a></li>
+        <li><a href="" data-id="contact">CONTACT</a></li>
+      </ul>
+
+
+      <section class="content active" id="works">
+        <ul class="works-list">
+          <li><a href="works/works.html"><img src="img/works-sample.jpg"></a></li>
+          <li><a href="works/works.html"><img src="img/works-sample.jpg"></a></li>
+          <li><a href="works/works.html"><img src="img/works-sample.jpg"></a></li>
+          <li><a href="works/works.html"><img src="img/works-sample.jpg"></a></li>
+          <li><a href="works/works.html"><img src="img/works-sample.jpg"></a></li>
+          <li><a href="works/works.html"><img src="img/works-sample.jpg"></a></li>
+          <li><a href="works/works.html"><img src="img/works-sample.jpg"></a></li>
+          <li><a href="works/works.html"><img src="img/works-sample.jpg"></a></li>
+          <li><a href="works/works.html"><img src="img/works-sample.jpg"></a></li>
+        </ul>
+      </section>
+
+      <section class="content" id="about">
+        <div class="about-menu">
+
+          <div class="skill">
+            <h1>SKILL</h1>
+            <dl>
+              <dt><h1>HTML/CSS</h1></dt>
+              <dd><P>テキストが入ります。</P></dd>
+              
+              <dt><h1>java script</h1></dt>
+              <dd>テキストが入ります。</P></dd>
+              
+              <dt><h1>PHP</h1></dt>
+              <dd>テキストが入ります。</P></dd>
+            </dl>
+          </div>
+          
+          <div class="my-info">
+            <div class="career">
+              <h1>CAREER</h1>
+              <p>2021∼ フリーランスエンジニアとして活動</p>
             </div>
-            <div id="container">
-                <div id="main">
-                    <div class="post">
-                        <p>ここには文章が入ります。ここには文章が入ります。ここには文章が入ります。今は、適当な文章を入れてあります。これをダミーテキストといいます。</p>
-                    </div>
-                    <div class="post clearfix">
-                        <h2>小見出し1</h2>
-                        <img class="left" src="images/classroom.jpg" alt="授業風景"/>
-                        <p>
-                            コンテンツ1の本文になります。コンテンツ1の本文になります。コンテンツ1の本文になります。コンテンツ1の本文になります。コンテンツ1の本文になります。コンテンツ1の本文になります。コンテンツ1の本文になります。コンテンツ1の本文になります。
-                        </p>
-                        <p><a href="#">→コンテンツ1のページへ</a></p>
-                    </div>
-                    <div class="post clearfix">
-                        <h2>小見出し2</h2>
-                        <img class="right" src="images/scale.jpg" alt="天秤"/>
-                        <p>
-                            コンテンツ2の本文になります。コンテンツ2の本文になります。コンテンツ2の本文になります。コンテンツ2の本文になります。コンテンツ2の本文になります。コンテンツ2の本文になります。コンテンツ2の本文になります。コンテンツ2の本文になります。
-                        </p>
-                    </div>
-                </div>
-                <div id="side">
-                    <div class="box">
-                        <h2>サイドメニュー1</h2>
-                        <div class="boxBody">
-                            <ul>
-                                <li>項目1</li>
-                                <li>項目2</li>
-                                <li>項目3</li>
-                                <li>項目4</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <h2>サイドメニュー2</h2>
-                        <div class="boxBody">
-                            <ul>
-                                <li>項目1</li>
-                                <li>項目2</li>
-                                <li>項目3</li>
-                                <li>項目4</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="profile">
+              <h1>PROFILE</h1>
+              <p>1995年生まれ。　山梨県出身<br>
+                専門学校で鍼灸師の資格取得後、
+                鍼灸整骨院で勤務。<br>
+                その後2021年∼フリーランスエンジニアとして活動中。
+              </p>
+              
             </div>
+          </div>
         </div>
 
-        <div id="page_top">
-            <a href="#">&and;<br>TOP</a>
+      </section>
+
+      <section class="content" id="contact">
+        <div class="contact-title">
+          <h1>お問い合わせ</h1>
         </div>
-        <div id="footer">
-            <p>&copy; 20xx ○○ All Rights Reserved.</p>
+
+        <div class="contact-menu">
+
+          <div class="mail">
+            <h1>mail adress</h1>
+            <p>○○○○＠gmail.com</p>
+          </div>
+          
+          <div class="sns">
+            <div class="instagram">
+              <h1>inftagram</h1>
+              <a href="https://instagram.com" target="_blank">instagram</a>
+            </div>
+            
+            <div class="twitter">
+              <h1>twitter</h1>
+              <a href="https://twitter.com" target="_blank">twitter</a>
+            </div>
+          </div>
         </div>
-    </body>
-</html> 
+      </section>
+    </div>
+    <!-- /menu -->
+    
+    <div class="page-top">
+      <a class="botton" href="#index">page top</a>
+    </div>
+    
+    <!-- footer -->
+    <footer class="footer">
+     <p>&copy;Takamasa Ashiwawa</p>
+    </footer>
+    <!-- /footer -->
+
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
